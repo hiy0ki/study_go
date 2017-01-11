@@ -9,6 +9,9 @@ func main() {
 
     a, b := swap("hello","world")
     fmt.Println(a, b)
+
+
+    fmt.Println(split(17))
 }
 
 
@@ -26,4 +29,8 @@ func swap(x, y string) (string, string) {
 
 // naked return ステートメント
 // 戻り値となる変数に名前をつける
-// TODO 実装例 https://go-tour-jp.appspot.com/basics/7
+func split(sum int) (x, y int){
+    x = sum * 4 / 9
+    y = sum - x
+    return
+}
