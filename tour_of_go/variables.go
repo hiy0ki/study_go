@@ -13,15 +13,15 @@ func main() {
 	// 初期化子がある場合型を省略できる
 	var hoge, fuga = "hoge", 100
 	fmt.Println(hoge, fuga)
-    
-    // 関数内ではvar の代わりに := を使うことができる
-    aaa := 1001
-    fmt.Println(aaa)
 
-    // 定数
-    fmt.Println(HOGE)
+	// 関数内ではvar の代わりに := を使うことができる
+	aaa := 1001
+	fmt.Println(aaa)
 
-    const Truth = true
-    fmt.Println(Truth)
+	// 定数
+	fmt.Println(HOGE)
+
+	const Truth = true
+	fmt.Println(Truth)
 
 }
