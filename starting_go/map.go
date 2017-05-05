@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main () {
+func main() {
 	// 宣言
 	//var m map[int]string
 
@@ -19,25 +19,25 @@ func main () {
 
 	// mapリテラルで作る
 	m2 := map[string]string{
-		"us": "america", 
-		"jp": "japan", 
+		"us":   "america",
+		"jp":   "japan",
 		"hoge": "hogehoge", // カンマが必要
 	}
 
 	fmt.Println(m2)
 
 	// sliceをもつmap
-	m3 := map[int][]int {
+	m3 := map[int][]int{
 		1: []int{1},
-		2: []int{1,3},
-		3: {4,3,3}, // 省略することも可能
+		2: []int{1, 3},
+		3: {4, 3, 3}, // 省略することも可能
 	}
 
 	fmt.Println(m3)
 
 	// mapの要素がmapの場合 宣言が複雑なのは仕方ないのか。。
-	m4 := map[int]map[float64]string {
-		1: { 3.14 : "円周率" },
+	m4 := map[int]map[float64]string{
+		1: {3.14: "円周率"},
 	}
 
 	fmt.Println(m4)
@@ -46,9 +46,9 @@ func main () {
 	// その回避方法
 	m5 := map[int]string{1: "a", 2: "b", 3: "c"}
 	s, ok := m5[1]
-	fmt.Println(s,ok)
+	fmt.Println(s, ok)
 	s2, ok2 := m5[5]
-	fmt.Println(s2,ok2)
+	fmt.Println(s2, ok2)
 
 	// よくある書き方
 	if _, ok := m5[2]; ok {
@@ -58,8 +58,8 @@ func main () {
 
 	// forで回す
 	// キーの順序は保証されない
-	for k,v := range m2 {
-		fmt.Println(k,v)
+	for k, v := range m2 {
+		fmt.Println(k, v)
 	}
 
 	// 要素を削除する

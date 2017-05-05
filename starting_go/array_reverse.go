@@ -9,7 +9,7 @@ import (
 */
 func main() {
 	a := [4]string{
-		"yamada", 
+		"yamada",
 		"suzuki",
 		"tanaka",
 		"satou", // この要素にカンマがないとsyntax errorになる
@@ -23,17 +23,17 @@ func main() {
 	// その１
 	out_ary := []string{}
 	for i := 1; i <= length; i++ {
-		out_ary = append(out_ary, a[length -i])
+		out_ary = append(out_ary, a[length-i])
 	}
-	
+
 	fmt.Println(out_ary)
 
 	// その２
 	out_ary2 := []string{}
-	for i := length -1 ; i >= 0; i-- {
+	for i := length - 1; i >= 0; i-- {
 		out_ary2 = append(out_ary2, a[i])
 	}
-	
+
 	fmt.Println(out_ary2)
 
 }

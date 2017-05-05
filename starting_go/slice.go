@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 )
+
 /*
 参照型 は 3種類
 1. slice
@@ -27,13 +28,13 @@ func main() {
 	fmt.Println(cap(s2))
 
 	// makeを使用しないスライスの生成方法
-	s3 := []int{1,2,3,4,5}
+	s3 := []int{1, 2, 3, 4, 5}
 	fmt.Println(s3)
 	fmt.Println(len(s3))
 	fmt.Println(cap(s3))
 
 	// 簡易スライス式
-	a := [5]int{1,2,3,4,5}
+	a := [5]int{1, 2, 3, 4, 5}
 	s4 := a[0:2]
 	fmt.Println(s4)
 
@@ -42,18 +43,16 @@ func main() {
 	fmt.Println(a)
 
 	// スライスと可変長引数
-	fmt.Println(sum(1,2,3,4))
-	fmt.Println(sum(1,2,3,4,6,7,8,98))
+	fmt.Println(sum(1, 2, 3, 4))
+	fmt.Println(sum(1, 2, 3, 4, 6, 7, 8, 98))
 }
-
 
 // 可変長引数サンプル
 // 可変長引数は引数の末尾に一つだけ定義できる
 func sum(s ...int) int {
 	n := 0
-	for _,v := range s {
+	for _, v := range s {
 		n += v
 	}
 	return n
 }
-

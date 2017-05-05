@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"./pak"
+	"fmt"
 )
 
 func main() {

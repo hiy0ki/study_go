@@ -5,26 +5,25 @@ import (
 )
 
 func main() {
-	fmt.Println(plus(10,45))
+	fmt.Println(plus(10, 45))
 
 	hello()
 
 	a, b := div(20, 32)
-	fmt.Println(a,b)
+	fmt.Println(a, b)
 
 	// 戻り値の破棄
-	a2, _  := div(20, 32)
+	a2, _ := div(20, 32)
 	fmt.Println(a2)
-
 
 	fmt.Println(hoge())
 	fmt.Println(hoge2())
 
-	fmt.Println(div2(4,3))
+	fmt.Println(div2(4, 3))
 
 	// 無名関数 (クロージャ)
 	f := func(x, y int) int { return x + y }
-	fmt.Println(f(4,3))
+	fmt.Println(f(4, 3))
 	// 無名関数の型定義の確認
 	fmt.Printf("%T\n", f)
 
@@ -34,7 +33,7 @@ func main() {
 
 	// 関数を返す関数
 	returnFunc()()
-	
+
 	// 関数を引数に取る関数
 	callFunc(returnFunc())
 }
@@ -72,7 +71,6 @@ func hoge2() int {
 	return a
 }
 
-
 // div()のローカル変数定義を省略してみる
 func div2(x, y int) (a, b int) {
 	a = x + y
@@ -80,7 +78,6 @@ func div2(x, y int) (a, b int) {
 
 	return a, b
 }
-
 
 // 関数を返す関数
 func returnFunc() func() {
@@ -93,4 +90,3 @@ func returnFunc() func() {
 func callFunc(f func()) {
 	f()
 }
-

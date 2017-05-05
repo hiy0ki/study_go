@@ -24,7 +24,7 @@ func increment() func() int {
 	}
 }
 
-func main () {
+func main() {
 	f := later()
 
 	fmt.Println(f("hoge"))

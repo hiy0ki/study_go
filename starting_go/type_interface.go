@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main () {
+func main() {
 	/*
 	 intarface{}型は、
 	 - すべての型と互換性を持つ(javaのobject型的な?)
@@ -24,7 +24,7 @@ func main () {
 	fmt.Printf("%v", x)
 
 	// ただし演算はできない
-	var a,b interface{}
-	a,b = 1, 2
+	var a, b interface{}
+	a, b = 1, 2
 	fmt.Println(a + b) // エラー
 }
