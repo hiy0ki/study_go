@@ -1,0 +1,2 @@
+echo "hogehoe" > hoge.txt
+echo 123 > fuga.txt
