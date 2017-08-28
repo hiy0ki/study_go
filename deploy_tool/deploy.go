@@ -49,7 +49,7 @@ func main() {
 	port := "22"
 	user := "vagrant"
 
-	buf, err := ioutil.ReadFile("/Users/hiroki/.ssh/id_rsa.pem")
+	buf, err := ioutil.ReadFile("")
 	if err != nil {
 		panic(err)
 	}
