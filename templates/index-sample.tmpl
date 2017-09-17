@@ -1,0 +1,10 @@
+Hi, :).
+length of sample slice is {{ len .SampleSlice }}.
+{{ $ss := .SampleSlice }}
+length of $ss is {{ len $ss }}
+ 
+length of sample map is {{ .SampleMap }}.
+P1's JobList length is {{ len .P1.JobList }}
+ 
+index "SampleSlice" of . is {{ index . "SampleSlice" }}
+the 2nd elemnt of index "SampleSlice" of . is {{ index . "SampleSlice" 3 }}
