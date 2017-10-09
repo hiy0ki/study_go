@@ -12,7 +12,7 @@ type User struct {
 }
 
 func main() {
-	db, err := gorm.Open("mysql", "")
+	db, err := gorm.Open("mysql", "user:password@/database?charset=utf8&parseTime=True&loc=Local")
 	defer db.Close()
 	if err != nil {
 		panic(err)
@@ -27,4 +27,6 @@ func main() {
 	db.Create(&user)
 
 	fmt.Println(user.Id)
+	fmt.Println(db.HasTable(&User{}))
+	fmt.Println(db.HasTable("users"))
 }
